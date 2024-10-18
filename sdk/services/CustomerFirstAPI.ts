@@ -3,6 +3,7 @@ import CustomerService from "./customerService";
 import ProductService from "./ProductService";
 import SettingsService from "./SettingsService";
 import TicketService from "./TicketService";
+import TicketTagService from "./TicketTags";
 import UsersService from "./UsersService";
 
 class CustomerFirstAPI {
@@ -11,6 +12,7 @@ class CustomerFirstAPI {
   products: ProductService;
   settings: SettingsService;
   users: UsersService;
+  ticketTags: TicketTagService;
 
   constructor(apiKey: string, baseUrl?: string) {
     this.customers = new CustomerService(apiKey, baseUrl);
@@ -18,6 +20,7 @@ class CustomerFirstAPI {
     this.products = new ProductService(apiKey, baseUrl);
     this.settings = new SettingsService(apiKey, baseUrl);
     this.users = new UsersService(apiKey, baseUrl);
+    this.ticketTags = new TicketTagService(apiKey, baseUrl);
   }
 
   custom<T = unknown, M extends HttpMethod = HttpMethod>(
