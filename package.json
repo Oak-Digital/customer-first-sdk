@@ -1,0 +1,38 @@
+{
+  "name": "customer-first-sdk",
+  "version": "1.0.0",
+  "description": "SDK for CustomerFirst API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc --module esnext --outDir dist/esm",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "sdk",
+    "api",
+    "customer-first"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "openapi-fetch": "^0.x.x"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^4.x.x"
+  }
+}
