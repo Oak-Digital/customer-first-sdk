@@ -33,19 +33,17 @@ const api = new CustomerFirstAPI("your-api-key", "https://api.base.url");
 Now you can use the various services provided by the SDK:
 
 ```javascript
-// Example: Get customer information
-const customerInfo = await api.customers.getCustomer("customer-id");
+// Example: Get a list of customers
+const customers = await api.customers.getCustomers();
 
 // Example: Create a new ticket
 const newTicket = await api.tickets.createTicket({
-  title: "New Issue",
-  description: "This is a test ticket",
-});
-
-// Example: Update product information
-await api.products.updateProduct("product-id", {
-  name: "Updated Product Name",
-  price: 29.99,
+  customerid: customer.content.id || 0, // Get the customer ID from the previous step
+  assignee: 18400,
+  workload: 1,
+  storeid: 5737,
+  status: TicketStatus.New,
+  type: TicketType.Sale,
 });
 ```
 
@@ -58,6 +56,7 @@ The SDK provides the following services:
 - `products`: Manage product data
 - `settings`: Configure API settings
 - `users`: Manage user accounts
+- `ticket tags`: Manage ticket tags
 
 Each service provides methods for interacting with the corresponding API endpoints. Refer to the API documentation for detailed information on available methods and their parameters.
 
