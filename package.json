@@ -1,6 +1,6 @@
 {
   "name": "@oak-digital/customer-first-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SDK for CustomerFirst API",
   "main": "dist/cjs/main.js",
   "module": "dist/esm/main.js",
@@ -16,6 +16,7 @@
     }
   },
   "scripts": {
+    "release": "bumpp",
     "build": "npm run build:esm && npm run build:cjs",
     "build:esm": "tsc --module esnext --outDir dist/esm",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
