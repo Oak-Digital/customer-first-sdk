@@ -1,1 +1,0 @@
-{"version":3,"file":"SettingsService.js","sourceRoot":"","sources":["../../../../sdk/services/SettingsService.ts"],"names":[],"mappings":";;AAAA,uCAAoC;AAEpC,mBAAmB;AACnB,MAAM,eAAgB,SAAQ,iBAAO;IACnC,KAAK,CAAC,QAAQ;QACZ,OAAO,IAAI,CAAC,cAAc,CAAC,GAAG,EAAE,CAAC,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,WAAW,CAAC,CAAC,CAAC;IACjE,CAAC;CACF;AAED,kBAAe,eAAe,CAAC"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"UsersService.js","sourceRoot":"","sources":["../../../../sdk/services/UsersService.ts"],"names":[],"mappings":";;AAAA,uCAAoC;AAEpC,mBAAmB;AACnB,MAAM,YAAa,SAAQ,iBAAO;IAChC,KAAK,CAAC,QAAQ;QACZ,OAAO,IAAI,CAAC,cAAc,CAAC,GAAG,EAAE,CAAC,IAAI,CAAC,MAAM,CAAC,GAAG,CAAC,QAAQ,CAAC,CAAC,CAAC;IAC9D,CAAC;CACF;AAED,kBAAe,YAAY,CAAC"}
