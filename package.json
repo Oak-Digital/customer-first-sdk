@@ -1,5 +1,5 @@
 {
-  "name": "customer-first-sdk",
+  "name": "@oak-digital/customer-first-sdk",
   "version": "1.0.0",
   "description": "SDK for CustomerFirst API",
   "main": "dist/index.js",
@@ -25,14 +25,16 @@
     "api",
     "customer-first"
   ],
-  "author": "Your Name",
+  "author": "Oak Digital",
   "license": "MIT",
   "dependencies": {
+    "bumpp": "^9.7.1",
     "openapi-fetch": "^0.x.x"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
+    "openapi-typescript": "^7.4.1",
     "rimraf": "^6.0.1",
-    "typescript": "^4.x.x"
+    "typescript": "^5.6.3"
   }
 }
