@@ -2,10 +2,7 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
-    "lib": [
-      "ES2022",
-      "DOM"
-    ],
+    "lib": ["ES2022", "DOM"],
     "moduleResolution": "node",
     "rootDir": ".",
     "outDir": "./dist",
@@ -21,16 +18,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "."
   },
-  "include": [
-    "main.ts",
-    "sdk/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ]
+  "include": ["main.ts", "sdk/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts", "**/*.test.ts"]
 }

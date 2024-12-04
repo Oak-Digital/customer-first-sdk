@@ -11,9 +11,9 @@ class ProductService extends BaseAPI {
   async searchProducts(
     queryParams?: listProductsQueryParams,
   ): Promise<searchProducts> {
-    return this.handleResponse(() =>
-      this.client.GET("/products", { params: { query: queryParams } }),
-    );
+    return this.handleResponse(() => {
+      return this.client.GET("/products", { params: { query: queryParams } });
+    });
   }
 
   /* @deprecated in favor of searchProducts */

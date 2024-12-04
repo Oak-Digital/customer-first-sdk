@@ -17,6 +17,7 @@
   },
   "scripts": {
     "release": "bumpp",
+    "build_tsc": "tsc",
     "build": "npm run build:esm && npm run build:cjs",
     "build:esm": "tsc --module esnext --outDir dist/esm",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
@@ -31,7 +32,7 @@
   "license": "MIT",
   "dependencies": {
     "bumpp": "^9.7.1",
-    "openapi-fetch": "^0.x.x"
+    "openapi-fetch": "0.13.0"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
