@@ -6,6 +6,7 @@ import TicketService from "./TicketService";
 import GiftcardService from "./GiftcardService";
 import TicketTagService from "./TicketTags";
 import UsersService from "./UsersService";
+import POSPaymentsService from "./POSPaymentsService";
 
 class CustomerFirstAPI {
   customers: CustomerService;
@@ -15,6 +16,7 @@ class CustomerFirstAPI {
   users: UsersService;
   ticketTags: TicketTagService;
   giftcards: GiftcardService;
+  posPayments: POSPaymentsService; // Add the new service property
 
   constructor(apiKey: string, baseUrl?: string) {
     this.customers = new CustomerService(apiKey, baseUrl);
@@ -24,6 +26,7 @@ class CustomerFirstAPI {
     this.users = new UsersService(apiKey, baseUrl);
     this.ticketTags = new TicketTagService(apiKey, baseUrl);
     this.giftcards = new GiftcardService(apiKey, baseUrl);
+    this.posPayments = new POSPaymentsService(apiKey, baseUrl); // Instantiate the new service
   }
 
   custom<T = unknown, M extends HttpMethod = HttpMethod>(
