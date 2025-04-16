@@ -1,6 +1,6 @@
 {
   "name": "@oak-digital/customer-first-sdk",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "SDK for CustomerFirst API",
   "main": "dist/cjs/main.js",
   "module": "dist/esm/main.js",
