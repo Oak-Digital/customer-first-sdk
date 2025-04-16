@@ -5,3 +5,4 @@ export * from "./search";
 export * from "./ticketTags";
 export * from "./common";
 export * from "./product";
+export * from "./giftcard";

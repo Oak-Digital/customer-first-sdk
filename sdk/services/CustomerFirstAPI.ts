@@ -3,6 +3,7 @@ import CustomerService from "./customerService";
 import ProductService from "./ProductService";
 import SettingsService from "./SettingsService";
 import TicketService from "./TicketService";
+import GiftcardService from "./GiftcardService";
 import TicketTagService from "./TicketTags";
 import UsersService from "./UsersService";
 
@@ -13,6 +14,7 @@ class CustomerFirstAPI {
   settings: SettingsService;
   users: UsersService;
   ticketTags: TicketTagService;
+  giftcards: GiftcardService;
 
   constructor(apiKey: string, baseUrl?: string) {
     this.customers = new CustomerService(apiKey, baseUrl);
@@ -21,6 +23,7 @@ class CustomerFirstAPI {
     this.settings = new SettingsService(apiKey, baseUrl);
     this.users = new UsersService(apiKey, baseUrl);
     this.ticketTags = new TicketTagService(apiKey, baseUrl);
+    this.giftcards = new GiftcardService(apiKey, baseUrl);
   }
 
   custom<T = unknown, M extends HttpMethod = HttpMethod>(
