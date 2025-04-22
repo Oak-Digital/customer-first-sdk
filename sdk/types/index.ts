@@ -7,3 +7,4 @@ export * from "./common";
 export * from "./product";
 export * from "./giftcard";
 export * from "./posPayment";
+export * from "./paymenttypes"

@@ -7,6 +7,8 @@ import GiftcardService from "./GiftcardService";
 import TicketTagService from "./TicketTags";
 import UsersService from "./UsersService";
 import POSPaymentsService from "./POSPaymentsService";
+import PaymentTypesService from "./paymenttypesService";
+
 
 class CustomerFirstAPI {
   customers: CustomerService;
@@ -17,6 +19,7 @@ class CustomerFirstAPI {
   ticketTags: TicketTagService;
   giftcards: GiftcardService;
   posPayments: POSPaymentsService; // Add the new service property
+  paymentTypes: PaymentTypesService;
 
   constructor(apiKey: string, baseUrl?: string) {
     this.customers = new CustomerService(apiKey, baseUrl);
@@ -27,8 +30,11 @@ class CustomerFirstAPI {
     this.ticketTags = new TicketTagService(apiKey, baseUrl);
     this.giftcards = new GiftcardService(apiKey, baseUrl);
     this.posPayments = new POSPaymentsService(apiKey, baseUrl); // Instantiate the new service
+    this.paymentTypes = new PaymentTypesService(apiKey, baseUrl); // Instantiate the new service
   }
 
+  // TODO: Consider if the 'custom' method should delegate specifically to TicketService
+  // or if CustomerFirstAPI should have its own BaseAPI instance or client access.
   custom<T = unknown, M extends HttpMethod = HttpMethod>(
     options: CustomEndpointOptions<M>,
   ): Promise<T> {
